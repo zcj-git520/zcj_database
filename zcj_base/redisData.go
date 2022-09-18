@@ -1,4 +1,4 @@
-package zcj_database
+package zcj_base
 
 import (
 	"fmt"
@@ -39,7 +39,7 @@ func (d *RedisDataBase) Apply(f func(db *redis.Client) error) error {
 	return err
 }
 
-func NewRedis(c *connDataConfig) (*RedisDataBase, error) {
+func NewRedis(c *ConnDataConfig) (*RedisDataBase, error) {
 	addr := fmt.Sprintf("%s:%d", c.Host, c.Port)
 	dbNum, err :=  strconv.Atoi(c.DbName)
 	if err != nil {

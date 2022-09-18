@@ -1,4 +1,4 @@
-package zcj_database
+package zcj_base
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ import (
 type MysqlDataBase struct {
 	db 		*sqlx.DB
 	mu   	sync.Mutex
-	conf 	*connDataConfig
+	conf 	*ConnDataConfig
 }
 
 // 连接
@@ -43,7 +43,7 @@ func (d *MysqlDataBase) Apply(f func(db *sqlx.DB) error) error{
 	return err
 }
 
-func NewMysql(c *connDataConfig) (*MysqlDataBase, error) {
+func NewMysql(c *ConnDataConfig) (*MysqlDataBase, error) {
 	return &MysqlDataBase{
 		db:   nil,
 		mu:   sync.Mutex{},

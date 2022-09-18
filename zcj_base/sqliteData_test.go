@@ -1,4 +1,4 @@
-package zcj_database
+package zcj_base
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 func TestConnectRedis(t *testing.T) {
-	f := &fileDataConfig{
+	f := &FileDataConfig{
 		Path: "./sqliteDbPath",
 		Name: "test1.db",
 	}

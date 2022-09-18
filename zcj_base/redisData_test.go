@@ -1,4 +1,4 @@
-package zcj_database
+package zcj_base
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 func TestNewRedis(t *testing.T) {
-	c := &connDataConfig{
+	c := &ConnDataConfig{
 		Host:     "192.168.1.128",
 		Port:     6379,
 		UserName: "",

@@ -1,4 +1,4 @@
-package zcj_database
+package zcj_base
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 func TestNewMysql(t *testing.T) {
-	c := &connDataConfig{
+	c := &ConnDataConfig{
 		Host:     "127.0.0.1",
 		Port:     3306,
 		UserName: "root",

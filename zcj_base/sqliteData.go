@@ -1,5 +1,5 @@
 // sqlite 数据库的创建
-package zcj_database
+package zcj_base
 
 import (
 	"database/sql"
@@ -42,7 +42,7 @@ func (d *SqlLiteDataBase) Apply(f func(db *sql.DB) error) error{
 	return err
 }
 
-func NewCreatSqLite(f *fileDataConfig)(*SqlLiteDataBase, error)  {
+func NewCreatSqLite(f *FileDataConfig)(*SqlLiteDataBase, error)  {
 	if f.Path == "" || f.Name == ""{
 		return nil, fmt.Errorf("sql data path or name is empty")
 	}
